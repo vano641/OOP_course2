@@ -1,10 +1,11 @@
+import java.util.List;
 public interface task2_QueueBehaviour {
 
-    void takeInQueue(task2_Actor actor); // забрать из очереди
+    List<task2_Actor> takeInQueue(); // забрать из очереди
 
-    void takeOrders();// забрать заказ
+    List<task2_Actor> takeOrders();// забрать заказ
 
-    void giveOrders(); // отдать заказ
+    List<task2_Actor> giveOrders(); // отдать заказ
 
-    void releaseFromQueue(); // выйти из очереди
+    List<task2_Actor> releaseFromQueue(); // выйти очереди
 }
