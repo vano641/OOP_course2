@@ -1,7 +1,16 @@
 public class task2_Human extends task2_Actor{
 
-    public task2_Human(String name) { // конструктор
+    
+    public task2_Human(String name, boolean isMakeOrder, boolean isTakeOrder) { // конструктор
+        super(name, isTakeOrder, isTakeOrder);
+    }
+
+    public task2_Human(String name) {
         super(name);
+    }
+
+    public task2_Human(String name, boolean isMakeOrder) {
+        super(name, isMakeOrder);
     }
 
     @Override
@@ -27,6 +36,11 @@ public class task2_Human extends task2_Actor{
     @Override
     public String getName() {
         return super.name;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("name: %s - MakeOrder: %s - TakeOrder: %s", name, isMakeOrder, isTakeOrder);
     }
     
 }
